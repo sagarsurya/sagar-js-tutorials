@@ -174,3 +174,113 @@ console.log(nums);
 // Tic Tac Toe Game
 let game = [['X',null,'O'],[null,'X',null],['O',null,'X']];
 console.log(game);
+
+// --- Loops ---
+// --- For Loop ---
+// Print 1 to 5 numbers using for loop
+for(let i=1; i<=5; i++){
+    console.log('For Loop Interation - '+i);
+    console.log(i);
+}
+
+// Run Backward Loop
+for(let j=5; j>=1; j--){
+    console.log('For Loop Backward - '+j);
+    console.log(j);
+}
+
+// Print all odd numbers 1 to 15
+for(let k=1; k<=15; k=k+2){
+    console.log('Print all Odd Numbers');
+    console.log(k);
+}
+
+// Print all even numbers 2 to 10
+for(let x=2; x<=10; x=x+2){
+    console.log('Print all Even Numbers');
+    console.log(x);
+}
+
+// Print the multiplication table for 5
+for(let y=5; y<=50; y=y+5){
+    console.log('Multiplication table for 5');
+    console.log(y);
+}
+
+// Dynamic Code
+let z = prompt("Write any positive number");
+z = parseInt(z); // Convert z string into number to perform the below for loop.
+for(let a=z; a<=z*10; a=a+z){
+    console.log(a);
+}
+
+// --- Nested for Loop ---
+console.log('--- Nested for Loop ---');
+for(let b=1; b<=3; b++){ //Outer Loop
+    console.log(`Outer Loop ${b}`);
+    for(let c=1; c<=3; c++){ //Inner Loop
+        console.log(`Inner Loop ${c}`);
+    }
+}
+
+// --- While Loop ----
+let d = 1;
+while(d<=5){
+    console.log(`While Loop --- ${d}`);
+    d++
+}
+
+// --- Favorite Movie ---
+const favMovie = 'Iron Man';
+let guess = prompt("Guess my Favorite movie name, Enter Iron Man or q");
+while((guess != favMovie)){
+    if(guess == 'q'){
+        console.log('You quit');
+        break;
+    }
+    guess = prompt('Wrong Guess! please try again');
+}
+if(guess == favMovie){
+    console.log('Congratulations');
+} else {
+    console.log('You quit');
+}
+
+// --- Break Keyword ---
+let e = 1;
+while(e<=5){
+    if(e == 3){
+        break;
+    }
+    console.log(e);
+    e++;
+}
+console.log('We used break at 3');
+
+// --- Loops with Arrays ---
+console.log('--- Loops with Arrays ---');
+let fruitsArr = ['Mango', 'Kiwi', 'Apple', 'Banana', 'Orange'];
+
+for(let f=0; f<fruitsArr.length; f++){
+    console.log(f, fruitsArr[f]);
+}
+
+// -- Nested Arrays ---
+console.log('--- Nested Arrays ---');
+let heroes = [
+    ['Ironman','Spiderman','Thor'],
+    ['Superman','Wonder Women','Flash']
+];
+
+for(let g=0; g<heroes.length; g++){ //Outer Loop
+    console.log(`List #${g}`);
+    for(let h=0;h<heroes[g].length; h++){ //Inner Loop
+        console.log(heroes[g][h]);
+    }
+}
+
+// --- For of Loop --- New loop introduce in JS not compatable in  edge browser because of new loop
+console.log('--- For of Loop --- New loop introduce in JS not compatable in  edge browser because of new loop');
+for (fruit of fruitsArr){
+    console.log(fruit);
+}
